@@ -23,7 +23,7 @@ router.post("/register", async (req: Request, res: Response) => {
         }
         );
 
-        res.cookie("auth token", token, {
+        res.cookie("auth_token", token, {
             httpOnly: true, 
             secure: process.env.NODE_ENV === "production",
             maxAge: 86400000,
@@ -39,3 +39,4 @@ router.post("/register", async (req: Request, res: Response) => {
 
 
 export default router;
+ 
